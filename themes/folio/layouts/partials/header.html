@@ -1,0 +1,8 @@
+<header class="site-header">
+  <div class="header-inner">
+    <h1><a href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a></h1>
+    {{ with site.Params.description }}
+      <p class="site-description">{{ . }}</p>
+    {{ end }}
+  </div>
+</header>

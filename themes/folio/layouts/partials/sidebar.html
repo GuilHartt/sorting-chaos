@@ -1,0 +1,24 @@
+<aside class="sidebar">
+  <div style="padding: 0 1.5rem 1rem 1.5rem; text-align: center;">
+    <h2 style="font-size: 1.6rem; margin: 0;"><a href="{{ site.Home.RelPermalink }}" style="color: var(--heading-color); text-decoration: none;">{{ site.Title }}</a></h2>
+  </div>
+  <h3 style="font-size: 1.2rem; margin: 0 0 1rem 0; padding: 0 1.5rem; color: #777; text-align: left; text-transform: uppercase; letter-spacing: 1px;">Sumário</h3>
+  <nav>
+    <ul>
+      <li><a href="{{ site.Home.RelPermalink }}" {{ if .IsHome }}class="active"{{ end }}>Início</a></li>
+      {{ $currentPage := . }}
+      {{ range site.Sections.ByWeight }}
+        <li class="chapter">
+          <a href="{{ .RelPermalink }}" {{ if eq $currentPage . }}class="active"{{ end }}>{{ .Title }}</a>
+          {{ if gt (len .Pages) 0 }}
+            <ul class="sub-menu">
+              {{ range .Pages.ByWeight }}
+                <li><a href="{{ .RelPermalink }}" {{ if eq $currentPage . }}class="active"{{ end }}>{{ .Title }}</a></li>
+              {{ end }}
+            </ul>
+          {{ end }}
+        </li>
+      {{ end }}
+    </ul>
+  </nav>
+</aside>

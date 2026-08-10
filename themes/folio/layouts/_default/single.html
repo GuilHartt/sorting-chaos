@@ -1,0 +1,16 @@
+{{ define "main" }}
+  <header class="page-header">
+    <h1>{{ .Title }}</h1>
+    <p class="post-meta" style="color: #666; font-family: var(--font-heading); margin-top: -1rem; margin-bottom: 2rem; font-size: 1.1rem;">
+      {{ if .Params.date }}{{ .Date.Format "02/01/2006" }} &bull; {{ end }}
+      {{ site.Params.Author.name | default "Autor" }} &bull; 
+      {{ .ReadingTime }} min de leitura
+    </p>
+  </header>
+
+  <div class="page-content">
+    {{ .Content }}
+  </div>
+  
+  {{ partial "book-nav.html" . }}
+{{ end }}

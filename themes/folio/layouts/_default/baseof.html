@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ site.LanguageCode | default "pt-BR" }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body>
+    <div class="mobile-header">
+      <div class="mobile-site-title"><a href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a></div>
+      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Abrir Menu">☰</button>
+    </div>
+    <div class="sidebar-overlay" id="sidebar-overlay"></div>
+    
+    {{ partial "sidebar.html" . }}
+    
+    <main class="main-content">
+      <article class="content">
+        {{ block "main" . }}{{ end }}
+      </article>
+      
+      {{ partial "footer.html" . }}
+    </main>
+
+    <script>
+      const menuBtn = document.getElementById('mobile-menu-btn');
+      const sidebar = document.querySelector('.sidebar');
+      const overlay = document.getElementById('sidebar-overlay');
+      
+      function toggleMenu() {
+        sidebar.classList.toggle('active');
+        overlay.classList.toggle('active');
+      }
+      
+      menuBtn.addEventListener('click', toggleMenu);
+      overlay.addEventListener('click', toggleMenu);
+    </script>
+  </body>
+</html>

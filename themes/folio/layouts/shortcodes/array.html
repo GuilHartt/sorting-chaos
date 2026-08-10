@@ -1,0 +1,26 @@
+{{ $valuesStr := .Get "values" }}
+{{ $compareStr := default "" (.Get "compare") }}
+{{ $swapStr := default "" (.Get "swap") }}
+{{ $pivotStr := default "" (.Get "pivot") }}
+{{ $sortedStr := default "" (.Get "sorted") }}
+
+
+{{ $values := split (replace $valuesStr " " "") "," }}
+{{ $compare := split (replace $compareStr " " "") "," }}
+{{ $swap := split (replace $swapStr " " "") "," }}
+{{ $pivot := split (replace $pivotStr " " "") "," }}
+{{ $sorted := split (replace $sortedStr " " "") "," }}
+
+<div class="algo-array">
+  {{ range $index, $value := $values }}
+    {{ $idxStr := printf "%d" $index }}
+    {{ $classes := "algo-box" }}
+    
+    {{ if in $compare $idxStr }}{{ $classes = print $classes " compare" }}{{ end }}
+    {{ if in $swap $idxStr }}{{ $classes = print $classes " swap" }}{{ end }}
+    {{ if in $pivot $idxStr }}{{ $classes = print $classes " pivot" }}{{ end }}
+    {{ if in $sorted $idxStr }}{{ $classes = print $classes " sorted" }}{{ end }}
+
+    <div class="{{ $classes }}">{{ $value }}</div>
+  {{ end }}
+</div>

@@ -1,0 +1,46 @@
+{{ define "main" }}
+  <div class="book-cover">
+    <div class="book-cover-inner">
+      <h1 class="book-title">{{ site.Title }}</h1>
+      {{ with site.Params.description }}
+        <p class="book-subtitle">{{ . }}</p>
+      {{ end }}
+      <p class="book-author">por {{ site.Params.Author.name | default "Autor Desconhecido" }}</p>
+      
+      <div class="cover-content">
+        {{ .Content }}
+      </div>
+
+      <div class="book-start-action" style="margin-bottom: 4rem;">
+        {{ $firstChapter := index site.Sections.ByWeight 0 }}
+        {{ if $firstChapter }}
+          <a href="{{ $firstChapter.RelPermalink }}" class="btn-read">Iniciar Leitura &rarr;</a>
+        {{ end }}
+      </div>
+
+      <div class="home-toc" style="text-align: left; border-top: 2px dashed var(--border-color); padding-top: 2rem;">
+        <h2 style="font-size: 1.8rem; margin-bottom: 1.5rem; text-align: center; color: var(--heading-color);">Sumário</h2>
+        <ul style="list-style: none; padding: 0;">
+          {{ range site.Sections.ByWeight }}
+            <li style="margin-bottom: 1.5rem;">
+              <a href="{{ .RelPermalink }}" style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--heading-color); text-decoration: none; border-bottom: 2px solid transparent; transition: border 0.2s;">
+                {{ .Title }}
+              </a>
+              {{ if .Pages }}
+                <ul style="list-style: none; padding-left: 1.2rem; margin-top: 0.8rem; border-left: 1px dashed var(--border-color);">
+                  {{ range .Pages.ByWeight }}
+                    <li style="margin-bottom: 0.6rem;">
+                      <a href="{{ .RelPermalink }}" style="color: #555; font-size: 1.2rem; text-decoration: none;">
+                        {{ .Title }}
+                      </a>
+                    </li>
+                  {{ end }}
+                </ul>
+              {{ end }}
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
+{{ end }}

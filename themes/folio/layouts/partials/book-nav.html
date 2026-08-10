@@ -1,0 +1,31 @@
+{{ $allPages := slice }}
+{{ range site.Sections.ByWeight }}
+  {{ $allPages = $allPages | append . }}
+  {{ range .Pages.ByWeight }}
+    {{ $allPages = $allPages | append . }}
+  {{ end }}
+{{ end }}
+
+{{ $prev := "" }}
+{{ $next := "" }}
+{{ $currentPage := . }}
+
+{{ range $index, $page := $allPages }}
+  {{ if eq $page $currentPage }}
+    {{ if gt $index 0 }}
+      {{ $prev = index $allPages (sub $index 1) }}
+    {{ end }}
+    {{ if lt $index (sub (len $allPages) 1) }}
+      {{ $next = index $allPages (add $index 1) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+<div class="book-nav-buttons">
+  {{ with $prev }}
+    <a href="{{ .RelPermalink }}" class="prev-link">&larr; {{ .Title }}</a>
+  {{ end }}
+  {{ with $next }}
+    <a href="{{ .RelPermalink }}" class="next-link">{{ .Title }} &rarr;</a>
+  {{ end }}
+</div>

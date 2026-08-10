@@ -1,0 +1,28 @@
+{{ define "main" }}
+  <header class="page-header" style="text-align: center; margin-bottom: 3rem;">
+    <h1 style="font-size: 3rem; margin-bottom: 0.5rem;">{{ .Title }}</h1>
+    {{ with .Content }}
+      <div class="list-description" style="font-size: 1.2rem; color: #666;">
+        {{ . }}
+      </div>
+    {{ end }}
+  </header>
+
+  {{ if gt (len .Pages) 0 }}
+  <div class="list-content">
+    <h2 style="font-family: var(--font-heading); color: var(--heading-color); border: none;">Subcapítulos:</h2>
+    <ul style="list-style: none; padding-left: 0;">
+      {{ range .Pages.ByWeight }}
+        <li style="margin-bottom: 1.5rem; padding: 1.5rem; border: 1px solid var(--border-color); border-radius: var(--soft-sketch); background-color: #fff; box-shadow: 2px 2px 0px rgba(0,0,0,0.03);">
+          <h3 style="margin-top: 0; font-size: 1.6rem;"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          {{ with .Summary }}
+            <p style="margin-bottom: 0; color: #555;">{{ . | plainify | truncate 150 }}</p>
+          {{ end }}
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+  {{ end }}
+
+  {{ partial "book-nav.html" . }}
+{{ end }}

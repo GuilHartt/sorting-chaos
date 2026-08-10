@@ -1,0 +1,8 @@
+baseURL = 'https://GuilHartt.github.io/sorting-chaos/'
+locale = 'pt-br'
+title = 'Ordenando o Caos'
+theme = 'folio'
+
+[params]
+  [params.author]
+    name = "Guilherme Avelar"

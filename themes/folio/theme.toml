@@ -1,0 +1,11 @@
+name = "Folio"
+description = "A minimalist, paper-sketch inspired theme for books and documentation."
+license = "MIT"
+homepage = ""
+tags = ["book", "documentation", "minimalist", "sketch"]
+features = []
+min_version = "0.41.0"
+
+[author]
+  name = "Guilherme Avelar"
+  homepage = ""
