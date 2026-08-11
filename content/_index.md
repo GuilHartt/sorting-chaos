@@ -9,16 +9,7 @@ draft = false
 
 Seja bem-vindo(a) a uma jornada para desmistificar um dos tópicos mais fundamentais, e às vezes assustadores, da ciência da computação: os **Algoritmos** e a **Complexidade Algorítmica**.
 
-Este livro foi feito para você que quer entender o "porquê" e o "como" as coisas funcionam debaixo do capô, mas sem aquela linguagem acadêmica chata (a nossa maior inspiração estrutural aqui é o fantástico livro *"Entendendo Algoritmos"* de Aditya Bhargava). Vamos usar histórias, analogias do dia a dia e muitas, *muitas* ilustrações rabiscadas para que os conceitos realmente grudem na sua mente.
-
----
-
-## 👨‍💻 Sobre o Autor
-
-**Guilherme Avelar**
-*21 anos | Estudante de Ciência da Computação | Mineiro raiz*
-
-Apaixonado por código, movido a café e sempre em busca de entender como transformar o caos em ordem. Escrevi este livro da forma como eu gostaria de ter aprendido algoritmos quando comecei. Pegue sua caneca de café (ou pão de queijo) e vamos codar!
+Este livro foi feito para você que quer entender o "porquê" e o "como" as coisas funcionam debaixo do capô, mas sem aquela linguagem acadêmica chata (a nossa maior inspiração estrutural aqui é o fantástico livro *"Grokking Algorithms"* de Aditya Bhargava). Vamos usar histórias, analogias do dia a dia e muitas, *muitas* ilustrações rabiscadas para que os conceitos realmente grudem na sua mente.
 
 ![Caneca de café e pão de queijo ao lado do notebook](/images/cafe-pao-de-queijo.png)
 

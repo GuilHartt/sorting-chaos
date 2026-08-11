@@ -1,5 +1,5 @@
 +++
-title = '2.3. Insertion Sort: O Truque do Baralho 🃏'
+title = '2.3 Insertion Sort'
 date = '2026-08-10T14:00:00-03:00'
 weight = 3
 draft = false

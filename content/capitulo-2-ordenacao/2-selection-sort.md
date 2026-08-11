@@ -1,5 +1,5 @@
 +++
-title = '2.2. Selection Sort: A Arte da Escolha 🌰'
+title = '2.2 Selection Sort'
 date = '2026-08-10T13:00:00-03:00'
 weight = 2
 draft = false

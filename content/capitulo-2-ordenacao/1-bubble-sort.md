@@ -1,12 +1,11 @@
 +++
-title = '2.1. Bubble Sort: O Algoritmo das Bolhas 🫧'
+title = '2.1 Bubble Sort'
 date = '2026-08-10T12:25:00-03:00'
 weight = 1
 draft = false
 +++
 
-
-Imagine que você está na fila da cantina da universidade para pegar um café (sagrado). As pessoas começam a formar a fila, mas a tia da cantina decreta: *"A fila tem que ser por ordem de altura!"*
+Imagine que você está em uma fila desorganizada esperando por um café. Para resolver a bagunça, o responsável pelo atendimento estabelece uma nova regra: *"A fila precisa ser reorganizada por ordem de altura!"*
 
 Como você organizaria todo mundo?
 
