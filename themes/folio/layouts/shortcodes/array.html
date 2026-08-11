@@ -3,13 +3,17 @@
 {{ $swapStr := default "" (.Get "swap") }}
 {{ $pivotStr := default "" (.Get "pivot") }}
 {{ $sortedStr := default "" (.Get "sorted") }}
-
+{{ $holeStr := default "" (.Get "hole") }}
+{{ $floatingStr := default "" (.Get "floating") }}
+{{ $floatingVal := default "" (.Get "floating_val") }}
+{{ $showIndex := default false (.Get "show_index") }}
 
 {{ $values := split (replace $valuesStr " " "") "," }}
 {{ $compare := split (replace $compareStr " " "") "," }}
 {{ $swap := split (replace $swapStr " " "") "," }}
 {{ $pivot := split (replace $pivotStr " " "") "," }}
 {{ $sorted := split (replace $sortedStr " " "") "," }}
+{{ $hole := split (replace $holeStr " " "") "," }}
 
 <div class="algo-array">
   {{ range $index, $value := $values }}
@@ -20,7 +24,18 @@
     {{ if in $swap $idxStr }}{{ $classes = print $classes " swap" }}{{ end }}
     {{ if in $pivot $idxStr }}{{ $classes = print $classes " pivot" }}{{ end }}
     {{ if in $sorted $idxStr }}{{ $classes = print $classes " sorted" }}{{ end }}
+    {{ if in $hole $idxStr }}{{ $classes = print $classes " hole" }}{{ end }}
 
-    <div class="{{ $classes }}">{{ $value }}</div>
+    <div class="algo-box-container">
+      {{ if eq $floatingStr $idxStr }}
+        <div class="algo-floating-value">{{ if $floatingVal }}{{ $floatingVal }}{{ else }}{{ $value }}{{ end }}</div>
+      {{ end }}
+
+      <div class="{{ $classes }}">{{ if not (in $hole $idxStr) }}{{ $value }}{{ end }}</div>
+      
+      {{ if $showIndex }}
+        <div class="algo-index">{{ $index }}</div>
+      {{ end }}
+    </div>
   {{ end }}
 </div>

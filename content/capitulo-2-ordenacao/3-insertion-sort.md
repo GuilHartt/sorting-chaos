@@ -19,7 +19,7 @@ Imagine que você está segurando um leque de cartas na mão esquerda. A sua mã
 
 Vamos usar os mesmos números caóticos de antes:
 
-{{< array values="5, 3, 8, 4, 2" >}}
+{{< array values="5, 3, 8, 4, 2" show_index="true" >}}
 
 A regra de ouro aqui é: vamos imaginar que a primeira posição da lista (onde está o **5**) já é a nossa "mão esquerda organizada". Uma carta sozinha sempre está ordenada, certo? 
 
@@ -30,64 +30,64 @@ Então, nosso trabalho começa a partir da segunda carta.
 Nós olhamos para a próxima carta da pilha: o **3**. 
 Onde ele entra na nossa mão (que só tem o **5**)? Como o 3 é menor que o 5, o 5 precisa dar um passinho para a direita para abrir espaço.
 
-{{< array values="5, 3, 8, 4, 2" compare="1" >}}
+{{< array values="5, 3, 8, 4, 2" compare="1" hole="1" floating="1" show_index="true" >}}
 
 Abrindo espaço (o 5 vai para a direita):
-{{< array values="5, 5, 8, 4, 2" swap="0,1" >}}
+{{< array values="5, 5, 8, 4, 2" swap="1" hole="0" floating="0" floating_val="3" show_index="true" >}}
 
 Pronto! Nossa mão organizada agora tem duas cartas: `[3, 5]`. O resto (`[8, 4, 2]`) continua bagunçado na mesa.
 
-{{< array values="3, 5, 8, 4, 2" sorted="0,1" >}}
+{{< array values="3, 5, 8, 4, 2" sorted="0,1" show_index="true" >}}
 
 ### Inserindo a Carta 8
 
 A próxima carta da mesa é o **8**. 
 Nós olhamos para a nossa mão (que tem o `[3, 5]`). O 8 é maior que o 5? Sim. Então ele já está no lugar certo, na ponta direita! Não precisamos empurrar ninguém.
 
-{{< array values="3, 5, 8, 4, 2" compare="2" >}}
+{{< array values="3, 5, 8, 4, 2" compare="2" show_index="true" >}}
 
 Nossa mão cresceu: `[3, 5, 8]`.
 
-{{< array values="3, 5, 8, 4, 2" sorted="0,1,2" >}}
+{{< array values="3, 5, 8, 4, 2" sorted="0,1,2" show_index="true" >}}
 
 ### Inserindo a Carta 4
 
 Agora a coisa fica interessante. A próxima carta é o **4**.
 Nós comparamos o 4 com o 8. O 4 é menor, então o 8 dá um passo para a direita.
 
-{{< array values="3, 5, 8, 4, 2" compare="3" >}}
+{{< array values="3, 5, 8, 4, 2" compare="3" hole="3" floating="3" show_index="true" >}}
 
 O 8 pula uma casa abrindo espaço:
-{{< array values="3, 5, 8, 8, 2" swap="2,3" >}}
+{{< array values="3, 5, 8, 8, 2" swap="3" hole="2" floating="2" floating_val="4" show_index="true" >}}
 
 Comparamos o 4 (nossa carta atual) com o 5. O 4 é menor, então o 5 também dá um passo para a direita.
 
-{{< array values="3, 5, 5, 8, 2" swap="1,2" >}}
+{{< array values="3, 5, 5, 8, 2" swap="2" hole="1" floating="1" floating_val="4" show_index="true" >}}
 
 Comparamos o 4 com o 3. O 4 é maior! Achamos o buraco dele, e encaixamos a carta lá.
 
 Mão organizada: `[3, 4, 5, 8]`.
 
-{{< array values="3, 4, 5, 8, 2" sorted="0,1,2,3" >}}
+{{< array values="3, 4, 5, 8, 2" sorted="0,1,2,3" show_index="true" >}}
 
 ### Inserindo a Carta 2 (Última!)
 
 Falta só o **2**. Ele é menor que todos os números da nossa mão.
 
-{{< array values="3, 4, 5, 8, 2" compare="4" >}}
+{{< array values="3, 4, 5, 8, 2" compare="4" hole="4" floating="4" show_index="true" >}}
 
 Ou seja, todo mundo vai ter que se espremer e dar um passo para a direita para abrir o primeiríssimo espaço para o 2 entrar.
 
-{{< array values="3, 4, 5, 8, 8" swap="3,4" >}}
-{{< array values="3, 4, 5, 5, 8" swap="2,3" >}}
-{{< array values="3, 4, 4, 5, 8" swap="1,2" >}}
-{{< array values="3, 3, 4, 5, 8" swap="0,1" >}}
+{{< array values="3, 4, 5, 8, 8" swap="4" hole="3" floating="3" floating_val="2" show_index="true" >}}
+{{< array values="3, 4, 5, 5, 8" swap="3" hole="2" floating="2" floating_val="2" show_index="true" >}}
+{{< array values="3, 4, 4, 5, 8" swap="2" hole="1" floating="1" floating_val="2" show_index="true" >}}
+{{< array values="3, 3, 4, 5, 8" swap="1" hole="0" floating="0" floating_val="2" show_index="true" >}}
 
 E o 2 vai sentar lá na primeira cadeira.
 
 🎉 **Mão perfeitamente organizada!**
 
-{{< array values="2, 3, 4, 5, 8" sorted="0,1,2,3,4" >}}
+{{< array values="2, 3, 4, 5, 8" sorted="0,1,2,3,4" show_index="true" >}}
 
 ---
 

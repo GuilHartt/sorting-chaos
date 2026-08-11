@@ -22,33 +22,33 @@ Ao fazer isso repetidas vezes, os maiores valores vão "borbulhando" para o fina
 
 Vamos pegar um pequeno grupo de números totalmente caóticos:
 
-{{< array values="5, 3, 8, 4, 2" >}}
+{{< array values="5, 3, 8, 4, 2" show_index="true" >}}
 
 Nosso objetivo é deixá-los em ordem crescente (do menor para o maior). Vamos iniciar o que chamamos de **Passada 1** (ou *Pass 1*).
 
 ### Passada 1
 
 Começamos olhando para os dois primeiros elementos. Comparamos o **5** e o **3**.
-{{< array values="5, 3, 8, 4, 2" compare="0,1" >}}
+{{< array values="5, 3, 8, 4, 2" compare="0,1" show_index="true" >}}
 
 A regra é: se o número da esquerda for maior, eles trocam de lugar. 5 é maior que 3? Sim! Então **trocamos**.
-{{< array values="3, 5, 8, 4, 2" swap="0,1" >}}
+{{< array values="3, 5, 8, 4, 2" swap="0,1" show_index="true" >}}
 
 Agora, avançamos uma casa. Vamos comparar o **5** (que andou para a direita) com o **8**.
-{{< array values="3, 5, 8, 4, 2" compare="1,2" >}}
+{{< array values="3, 5, 8, 4, 2" compare="1,2" show_index="true" >}}
 
 O 5 é maior que o 8? Não. Então eles ficam exatamente onde estão.
 Avançamos novamente. Comparamos o **8** e o **4**.
-{{< array values="3, 5, 8, 4, 2" compare="2,3" >}}
+{{< array values="3, 5, 8, 4, 2" compare="2,3" show_index="true" >}}
 
 O 8 é maior que 4? Sim! Então eles **trocam** de lugar.
-{{< array values="3, 5, 4, 8, 2" swap="2,3" >}}
+{{< array values="3, 5, 4, 8, 2" swap="2,3" show_index="true" >}}
 
 Por fim, comparamos o **8** (que continua andando) e o **2**.
-{{< array values="3, 5, 4, 8, 2" compare="3,4" >}}
+{{< array values="3, 5, 4, 8, 2" compare="3,4" show_index="true" >}}
 
 8 é maior que 2? Com certeza. Eles **trocam**.
-{{< array values="3, 5, 4, 2, 8" swap="3,4" >}}
+{{< array values="3, 5, 4, 2, 8" swap="3,4" show_index="true" >}}
 
 🎉 **Fim da Passada 1!** Percebeu o que aconteceu? O maior número de todos (o 8) flutuou como uma bolha gigante até o final do array. Agora sabemos com absoluta certeza que o último elemento está na posição correta. 
 
@@ -59,38 +59,38 @@ Por fim, comparamos o **8** (que continua andando) e o **2**.
 Precisamos repetir o processo, mas agora não precisamos mais checar a última posição, porque o 8 já está ordenado.
 
 Voltamos para o início: Comparamos **3** e **5**.
-{{< array values="3, 5, 4, 2, 8" compare="0,1" >}}
+{{< array values="3, 5, 4, 2, 8" compare="0,1" show_index="true" >}}
 Não trocam.
 
 Comparamos **5** e **4**.
-{{< array values="3, 5, 4, 2, 8" compare="1,2" >}}
+{{< array values="3, 5, 4, 2, 8" compare="1,2" show_index="true" >}}
 O 5 é maior, então **trocam**.
-{{< array values="3, 4, 5, 2, 8" swap="1,2" >}}
+{{< array values="3, 4, 5, 2, 8" swap="1,2" show_index="true" >}}
 
 Comparamos **5** e **2**.
-{{< array values="3, 4, 5, 2, 8" compare="2,3" >}}
+{{< array values="3, 4, 5, 2, 8" compare="2,3" show_index="true" >}}
 O 5 é maior, então **trocam**.
-{{< array values="3, 4, 2, 5, 8" swap="2,3" >}}
+{{< array values="3, 4, 2, 5, 8" swap="2,3" show_index="true" >}}
 
 🎉 **Fim da Passada 2!** Agora o 5 está no seu lugar definitivo.
-{{< array values="3, 4, 2, 5, 8" sorted="3,4" >}}
+{{< array values="3, 4, 2, 5, 8" sorted="3,4" show_index="true" >}}
 
 ### Passada 3
 
 Começamos de novo com o que sobrou. Comparamos **3** e **4**. Não trocam.
 Comparamos **4** e **2**. O 4 é maior, então **trocam**.
 
-{{< array values="3, 2, 4, 5, 8" swap="1,2" >}}
+{{< array values="3, 2, 4, 5, 8" swap="1,2" show_index="true" >}}
 
 🎉 **Fim da Passada 3!** O 4 encontrou seu lugar.
 
 ### Passada 4 (Final)
 
 Comparamos **3** e **2**. O 3 é maior, então **trocam**.
-{{< array values="2, 3, 4, 5, 8" swap="0,1" >}}
+{{< array values="2, 3, 4, 5, 8" swap="0,1" show_index="true" >}}
 
 O array está completamente ordenado! A paz voltou ao caos.
-{{< array values="2, 3, 4, 5, 8" sorted="0,1,2,3,4" >}}
+{{< array values="2, 3, 4, 5, 8" sorted="0,1,2,3,4" show_index="true" >}}
 
 ---
 

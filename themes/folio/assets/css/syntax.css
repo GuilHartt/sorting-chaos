@@ -1,0 +1,6 @@
+
+pre, code { font-family: var(--font-code); font-size: 0.9em; }
+code { background-color: #eceaea; padding: 0.2em 0.4em; border-radius: 3px; color: #ba3232; }
+pre { background-color: var(--code-bg); color: var(--code-text); padding: 1.5rem; overflow-x: auto; border-radius: var(--soft-sketch); margin: 2rem 0; box-shadow: 3px 4px 0px rgba(0,0,0,0.1); border: 2px solid #1a1a1a; }
+pre code { background-color: transparent; padding: 0; color: inherit; border-radius: 0; }
+blockquote { margin: 1.5rem 0; padding: 0.8rem 1.2rem; background-color: #e06c6c; color: white; font-style: italic; border-radius: 255px 15px 225px 15px/15px 225px 15px 255px; box-shadow: 4px 4px 0px rgba(0,0,0,0.1); }

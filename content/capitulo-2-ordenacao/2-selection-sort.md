@@ -18,37 +18,37 @@ Imagine um esquilo faminto diante de uma pilha de nozes de tamanhos variados. El
 
 Vamos usar os mesmos números caóticos do nosso exemplo anterior:
 
-{{< array values="5, 3, 8, 4, 2" >}}
+{{< array values="5, 3, 8, 4, 2" show_index="true" >}}
 
 ### Passada 1
 
 O algoritmo começa na primeira posição (o índice 0, onde está o **5**). O objetivo é descobrir se existe algum número menor que ele no resto do array.
 
 Nós guardamos o **5** como o "menor número encontrado até agora".
-{{< array values="5, 3, 8, 4, 2" compare="0" >}}
+{{< array values="5, 3, 8, 4, 2" compare="0" show_index="true" >}}
 
 Agora olhamos o **3**. O 3 é menor que 5? Sim. Então atualizamos nosso "menor número" para ser o 3.
-{{< array values="5, 3, 8, 4, 2" compare="1" >}}
+{{< array values="5, 3, 8, 4, 2" compare="1" show_index="true" >}}
 
 Olhamos o **8**. É menor que 3? Não.
 Olhamos o **4**. É menor que 3? Não.
 Olhamos o **2**. É menor que 3? Sim! 
 
-{{< array values="5, 3, 8, 4, 2" compare="4" >}}
+{{< array values="5, 3, 8, 4, 2" compare="4" show_index="true" >}}
 
 Terminamos de olhar a lista inteira. O menor número de toda a lista é, definitivamente, o **2**. Como ele é o menor de todos, nós o **trocamos** de lugar com o número que estava na primeira posição (o 5).
 
-{{< array values="2, 3, 8, 4, 5" swap="0,4" >}}
+{{< array values="2, 3, 8, 4, 5" swap="0,4" show_index="true" >}}
 
 🎉 **Fim da Passada 1!** O **2** está na sua posição definitiva. A primeira noz do esquilo foi separada com sucesso.
 
-{{< array values="2, 3, 8, 4, 5" sorted="0" >}}
+{{< array values="2, 3, 8, 4, 5" sorted="0" show_index="true" >}}
 
 ### Passada 2
 
 Ignoramos a primeira posição (porque já está ordenada) e focamos no resto do array. O primeiro número não-ordenado agora é o **3**. Ele é o nosso candidato a menor.
 
-{{< array values="2, 3, 8, 4, 5" sorted="0" compare="1" >}}
+{{< array values="2, 3, 8, 4, 5" sorted="0" compare="1" show_index="true" >}}
 
 Olhamos o **8**. É menor que 3? Não.
 Olhamos o **4**. É menor que 3? Não.
@@ -56,7 +56,7 @@ Olhamos o **5**. É menor que 3? Não.
 
 Ao final, descobrimos que o **3** já era o menor elemento do resto da lista! Ele não precisa trocar de lugar com ninguém, apenas garantimos o lugar dele.
 
-{{< array values="2, 3, 8, 4, 5" sorted="0,1" >}}
+{{< array values="2, 3, 8, 4, 5" sorted="0,1" show_index="true" >}}
 
 ### Passada 3
 
@@ -66,22 +66,22 @@ Olhamos o **5**. É menor que 4? Não.
 
 O menor número restante é o **4**. Vamos **trocá-lo** de lugar com o cara que estava no início (o 8).
 
-{{< array values="2, 3, 4, 8, 5" swap="2,3" >}}
+{{< array values="2, 3, 4, 8, 5" swap="2,3" sorted="0,1" show_index="true" >}}
 
 O **4** está no lugar definitivo!
 
-{{< array values="2, 3, 4, 8, 5" sorted="0,1,2" >}}
+{{< array values="2, 3, 4, 8, 5" sorted="0,1,2" show_index="true" >}}
 
 ### Passada 4 (Final)
 
 Temos apenas o 8 e o 5. O primeiro é o **8**. Comparamos com o **5**. O 5 é menor.
 Trocamos o 8 pelo 5.
 
-{{< array values="2, 3, 4, 5, 8" swap="3,4" >}}
+{{< array values="2, 3, 4, 5, 8" swap="3,4" sorted="0,1,2" show_index="true" >}}
 
 E automaticamente, se o 5 está no lugar certo, o 8 (sendo o último) também está! O caos foi derrotado novamente.
 
-{{< array values="2, 3, 4, 5, 8" sorted="0,1,2,3,4" >}}
+{{< array values="2, 3, 4, 5, 8" sorted="0,1,2,3,4" show_index="true" >}}
 
 ---
 

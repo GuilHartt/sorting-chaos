@@ -1,0 +1,30 @@
+
+:root {
+  --bg-color: #fdfcf8; 
+  --text-color: #2a2a2a; 
+  --heading-color: #1a1a1a;
+  --link-color: #c94040; 
+  --link-hover-color: #a32a2a;
+  --sidebar-bg: #e5e2d6; 
+  --border-color: #c2bead;
+  --code-bg: #2d2d2d;
+  --code-text: #e6e6e6;
+  --code-accent: #a5d6a7; 
+  --font-body: 'Lora', 'Noto Emoji', serif;
+  --font-heading: 'Patrick Hand', 'Noto Emoji', cursive;
+  --font-code: 'Fira Code', 'Courier New', monospace;
+  --soft-sketch: 3px 15px 5px 10px/15px 3px 10px 5px;
+}
+* { box-sizing: border-box; overflow-wrap: break-word; word-wrap: break-word; }
+body { margin: 0; padding: 0; background-color: var(--bg-color); color: var(--text-color); font-family: var(--font-body); line-height: 1.7; font-size: 19px; display: flex; min-height: 100vh; }
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-color); }
+::-webkit-scrollbar-thumb { background: var(--border-color); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #a39f8f; }
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); color: var(--heading-color); margin-top: 2.5rem; margin-bottom: 1rem; line-height: 1.2; }
+h1 { font-size: 3rem; } h2 { font-size: 2.2rem; } h3 { font-size: 1.8rem; }
+p { margin-bottom: 1.5rem; }
+a { color: var(--link-color); text-decoration: none; transition: all 0.2s ease; }
+a:hover { text-decoration: underline wavy var(--link-color); text-underline-offset: 4px; }
+img { max-width: 100%; height: auto; margin: 2rem auto; display: block; }
+@media (min-width: 769px) { img { max-width: 500px; } }

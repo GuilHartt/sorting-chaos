@@ -1,0 +1,15 @@
+.algo-array { display: flex; gap: 12px; margin: 3rem 0; justify-content: center; flex-wrap: wrap; align-items: flex-end; }
+.algo-box-container { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; gap: 4px; }
+.algo-box { width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border: 2px solid var(--heading-color); border-radius: var(--soft-sketch); font-weight: bold; font-size: 1.3rem; font-family: var(--font-code); background-color: #fff; box-shadow: 2px 2px 0px rgba(0,0,0,0.05); transition: all 0.3s ease; position: relative; z-index: 2; }
+.algo-box.compare { background-color: #fdeb70; color: var(--heading-color); transform: translateY(-2px); box-shadow: 3px 3px 0px rgba(0,0,0,0.1); }
+.algo-box.swap { background-color: #e06c6c; color: white; border-color: #c24646; transform: scale(1.05); }
+.algo-box.pivot { background-color: #e1bee7; color: var(--heading-color); border-color: #ba68c8; }
+.algo-box.sorted { background-color: #81c784; color: var(--heading-color); border-color: #66bb6a; border-style: dashed; }
+.algo-box.hole { background-color: transparent; border-style: dashed; border-color: #c2bead; color: transparent; box-shadow: none; }
+.algo-index { font-size: 0.8rem; color: #888; margin-top: 4px; font-family: var(--font-code); }
+.algo-floating-value { width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; border: 2px solid var(--heading-color); border-radius: var(--soft-sketch); font-weight: bold; font-size: 1.3rem; font-family: var(--font-code); background-color: #7986cb; color: white; box-shadow: 2px 6px 12px rgba(0,0,0,0.15); z-index: 10; margin-bottom: 4px; }
+.author-aside { display: block; background-color: rgba(253, 235, 113, 0.2); border: 2px dashed var(--heading-color); border-radius: var(--soft-sketch); padding: 1.5rem; margin: 2.5rem 0; box-shadow: 4px 4px 0px rgba(0,0,0,0.04); }
+.author-aside::after { content: ""; display: table; clear: both; }
+.author-aside .aside-icon { font-size: 2rem; float: left; margin-right: 1rem; margin-top: -0.2rem; margin-bottom: 0.5rem; }
+.author-aside .aside-content { font-family: var(--font-body); font-style: italic; color: #444; }
+.author-aside .aside-content p:last-child { margin-bottom: 0; }

@@ -8,5 +8,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Patrick+Hand&family=Noto+Emoji:wght@400..700&display=swap" rel="stylesheet">
 
-
-<link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+{{ $base := resources.Get "css/base.css" }}
+{{ $layout := resources.Get "css/layout.css" }}
+{{ $components := resources.Get "css/components.css" }}
+{{ $syntax := resources.Get "css/syntax.css" }}
+{{ $shortcodes := resources.Get "css/shortcodes.css" }}
+{{ $style := slice $base $layout $components $syntax $shortcodes | resources.Concat "css/style.css" | minify }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
