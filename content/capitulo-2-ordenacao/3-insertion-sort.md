@@ -100,32 +100,32 @@ O laço `for` avança sobre o array pegando uma "carta nova" por vez. Em seguida
 Veja a implementação:
 
 ```python
-def insertion_sort(arr):
-    for i in range(1, len(arr)):
-        carta_atual = arr[i]
+def insertion_sort(lista):
+    for i in range(1, len(lista)):
+        carta_atual = lista[i]
         j = i - 1
-        while j >= 0 and arr[j] > carta_atual:
-            arr[j + 1] = arr[j]
+        while j >= 0 and lista[j] > carta_atual:
+            lista[j + 1] = lista[j]
             j -= 1
-        arr[j + 1] = carta_atual
+        lista[j + 1] = carta_atual
         
-    return arr
+    return lista
 ```
 
 ### 🧠 Dissecando a Lógica
 
 O Insertion Sort tem uma cara diferente porque ele não apenas varre a fila, ele **arrasta** as coisas de lugar. 
 
-1. **Pegando uma carta por vez (`for i in range(1, len(arr))`)**:
+1. **Pegando uma carta por vez (`for i in range(1, len(lista))`)**:
    Nós começamos no índice `1` (o segundo elemento) porque assumimos que a primeira carta (no índice `0`) já faz parte da nossa "mão" inicial. A partir daí, o laço de fora simplesmente puxa a próxima carta do baralho para organizá-la.
 
 2. **Olhando para trás (`j = i - 1`)**:
    Sempre que pegamos uma `carta_atual`, nós precisamos compará-la com as cartas que já estão na nossa mão. A variável `j` serve exatamente para apontar para o vizinho imediato da esquerda e ir descendo até o início da fila.
 
-3. **Abrindo espaço (`while j >= 0 and arr[j] > carta_atual`)**:
-   Esse `while` é o coração do algoritmo. Enquanto a carta da nossa mão (`arr[j]`) for maior que a carta nova, nós movemos ela uma casa para a direita (`arr[j + 1] = arr[j]`). É literalmente o movimento físico de afastar as cartas para abrir um buraco.
+3. **Abrindo espaço (`while j >= 0 and lista[j] > carta_atual`)**:
+   Esse `while` é o coração do algoritmo. Enquanto a carta da nossa mão (`lista[j]`) for maior que a carta nova, nós movemos ela uma casa para a direita (`lista[j + 1] = lista[j]`). É literalmente o movimento físico de afastar as cartas para abrir um buraco.
 
-4. **Encaixando no buraco (`arr[j + 1] = carta_atual`)**:
+4. **Encaixando no buraco (`lista[j + 1] = carta_atual`)**:
    Quando o laço de dentro termina (porque achamos uma carta menor ou batemos no início da fila), nós finalmente colocamos a `carta_atual` no buraco que ficou aberto.
 
 {{< aside >}}
@@ -144,3 +144,13 @@ O Insertion Sort tem uma característica que o torna especial entre os algoritmo
 
 
 É por causa desse comportamento brilhante no "melhor caso" que o Insertion Sort é usado na vida real dentro de algoritmos modernos muito mais complexos (como o Timsort, que é o padrão do próprio Python e do Java). Quando as listas que sobram ficam muito pequenininhas ou já quase ordenadas, os super-algoritmos "chamam" o humilde Insertion Sort para terminar o serviço de forma rápida e eficiente.
+
+---
+
+## 🎯 O Limite do \( O(n^2) \) e o Próximo Passo
+
+O Bubble, o Selection e o Insertion Sort são ótimos para aprender, mas todos eles compartilham uma fraqueza clássica: no pior caso, eles esbarram de frente no muro de tijolos do **\( O(n^2) \)**. Se você precisar ordenar grandes volumes de dados, o tempo de execução vai disparar rapidamente.
+
+Para superar essa barreira e alcançar a eficiência do \( O(n \log n) \) com algoritmos avançados (como Merge Sort e Quick Sort), os laços tradicionais de repetição, como `for` e `while`, não serão suficientes. Precisaremos de uma nova abordagem.
+
+No **[Capítulo 3](/capitulo-3-recursao/)**, vamos entender a mecânica fundamental por trás dos maiores algoritmos de ordenação do mundo: a **Recursividade**.

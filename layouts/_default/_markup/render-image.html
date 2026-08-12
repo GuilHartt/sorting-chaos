@@ -4,7 +4,7 @@
 {{ $image := resources.Get $imagePath }}
 
 {{ if $image }}
-  {{ $optimized := $image.Resize "800x webp q75" }}
+  {{ $optimized := $image.Fit "800x350 webp q75" }}
   <img src="{{ $optimized.RelPermalink }}" alt="{{ .Text }}" {{ with .Title }}title="{{ . }}"{{ end }} loading="lazy" />
 {{ else }}
   <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title }}title="{{ . }}"{{ end }} loading="lazy" />

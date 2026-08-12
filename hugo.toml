@@ -16,4 +16,4 @@ theme = 'folio'
           block = [['\[', '\]'], ['$$', '$$']]
           inline = [['\(', '\)']]
   [markup.highlight]
-    style = "aura-theme-dark"
+    style = "catppuccin-latte"

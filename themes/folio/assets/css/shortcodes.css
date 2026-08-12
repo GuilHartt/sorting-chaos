@@ -126,3 +126,67 @@
 .author-aside .aside-content p:last-child {
     margin-bottom: 0;
 }
+
+
+/* --- Call Stack Shortcode --- */
+
+.algo-callstack-container {
+    display: flex;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.algo-callstack {
+    display: flex;
+    flex-direction: column-reverse; /* Bottom items at the bottom */
+    width: 100%;
+    max-width: 350px;
+    border: 3px solid var(--heading-color);
+    border-radius: var(--soft-sketch);
+    background-color: #fff;
+    overflow: hidden; /* To keep frame borders neat */
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.08);
+}
+
+.callstack-frame {
+    width: 100%;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 2px dashed var(--heading-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+    font-family: var(--font-code);
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    padding: 0.5rem 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.callstack-frame:first-child {
+    border-bottom: none;
+}
+
+.callstack-frame.active {
+    background-color: #fdeb70;
+    color: var(--heading-color);
+    z-index: 3;
+}
+
+.callstack-frame.basecase {
+    background-color: #81c784;
+    color: var(--heading-color);
+}
+
+.callstack-frame.popping {
+    background-color: #eee;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.frame-label {
+    text-align: center;
+    word-break: break-all;
+}

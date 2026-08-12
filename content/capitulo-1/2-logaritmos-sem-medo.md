@@ -49,4 +49,6 @@ Na notação final do Big O, nós geralmente omitimos a base e escrevemos apenas
 
 A partir de agora, toda vez que você se esbarrar com \( O(\log n) \) na documentação de um código, não pense em matemática avançada. Pense num espadachim cortando um problema colossal exatamente no meio, repetidas vezes, até que não sobre nada além da resposta.
 
-E com essas fundações de aço assentadas... a verdadeira guerra contra o caos vai começar. Nos vemos no Capítulo 2!
+E com essas fundações matemáticas assentadas, nós finalmente temos o vocabulário necessário para medir se as nossas soluções são rápidas ou lentas. 
+
+Pronto para aplicar isso na prática? Siga em frente para o **[Capítulo 2](/capitulo-2-ordenacao/)** e conheça os algoritmos de ordenação mais famosos do mundo!

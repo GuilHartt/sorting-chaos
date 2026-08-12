@@ -1,0 +1,26 @@
+{{ $framesStr := .Get "frames" }}
+{{ $activeStr := default "" (.Get "active") }}
+{{ $basecaseStr := default "" (.Get "basecase") }}
+{{ $poppingStr := default "" (.Get "popping") }}
+
+{{ $frames := split $framesStr "," }}
+{{ $active := split (replace $activeStr " " "") "," }}
+{{ $basecase := split (replace $basecaseStr " " "") "," }}
+{{ $popping := split (replace $poppingStr " " "") "," }}
+
+<div class="algo-callstack-container">
+  <div class="algo-callstack">
+    {{ range $index, $frame := $frames }}
+      {{ $idxStr := printf "%d" $index }}
+      {{ $classes := "callstack-frame" }}
+      
+      {{ if in $active $idxStr }}{{ $classes = print $classes " active" }}{{ end }}
+      {{ if in $basecase $idxStr }}{{ $classes = print $classes " basecase" }}{{ end }}
+      {{ if in $popping $idxStr }}{{ $classes = print $classes " popping" }}{{ end }}
+
+      <div class="{{ $classes }}">
+        <span class="frame-label">{{ $frame }}</span>
+      </div>
+    {{ end }}
+  </div>
+</div>

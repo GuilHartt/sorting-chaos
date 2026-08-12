@@ -98,14 +98,14 @@ O array está completamente ordenado! A paz voltou ao caos.
 A implementação do Bubble Sort exige dois laços de repetição aninhados. Vamos analisar o porquê de cada linha existir e, em especial, entender a matemática por trás dos limites desses laços.
 
 ```python
-def bubble_sort(arr):
-    n = len(arr)
+def bubble_sort(lista):
+    n = len(lista)
     for i in range(n):
         for j in range(0, n - i - 1):
-            if arr[j] > arr[j + 1]:
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+            if lista[j] > lista[j + 1]:
+                lista[j], lista[j + 1] = lista[j + 1], lista[j]
                 
-    return arr
+    return lista
 ```
 
 ### 🧠 Dissecando a Lógica

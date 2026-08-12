@@ -1,4 +1,14 @@
 {{ define "main" }}
+  <style>
+    .list-description ul, .list-description ol {
+      max-width: 600px;
+      margin: 1.5rem auto;
+      padding-left: 2rem;
+    }
+    .list-description li, .list-description li p {
+      text-align: left;
+    }
+  </style>
   <header class="page-header" style="text-align: center; margin-bottom: 3rem;">
     <h1 style="font-size: 3rem; margin-bottom: 0.5rem;">{{ .Title }}</h1>
     {{ with .Content }}

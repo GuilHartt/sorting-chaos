@@ -27,6 +27,6 @@ Você também vai trombar com algumas caixas destacadas no meio do texto, mais o
 
 E o mais importante: **não confie em mim**. Sempre que eu te mostrar um pedaço de código, leve para o seu editor favorito. Mude as variáveis, jogue *prints* no meio do laço de repetição e veja o que acontece. Quebre o código propositalmente. A melhor forma de aprender como um sistema interno funciona é desmontando as peças para ver onde ele falha.
 
-Preparado? Seus neurônios vão fritar um pouquinho nos próximos capítulos, mas eu prometo que vai valer a pena. 
+Preparado? A jornada pelos próximos capítulos será intensa e desafiadora, mas eu prometo que vai valer a pena. 
 
-Clique em **"Avançar"** ou use a barra lateral para começarmos a organizar o caos de verdade.
+Clique para avançar rumo ao **[Capítulo 1](/capitulo-1/)**, onde começaremos a medir e organizar o caos de verdade.

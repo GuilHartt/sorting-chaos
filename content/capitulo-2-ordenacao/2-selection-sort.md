@@ -90,16 +90,16 @@ E automaticamente, se o 5 está no lugar certo, o 8 (sendo o último) também es
 A implementação do Selection Sort exige uma lógica de rastreamento de índices. Vamos analisar como os laços refletem a estratégia de encontrar o menor valor.
 
 ```python
-def selection_sort(arr):
-    n = len(arr)
+def selection_sort(lista):
+    n = len(lista)
     for i in range(n):
         indice_menor = i
         for j in range(i + 1, n):
-            if arr[j] < arr[indice_menor]:
+            if lista[j] < lista[indice_menor]:
                 indice_menor = j  # Atualiza a posição do menor elemento encontrado.
-        arr[i], arr[indice_menor] = arr[indice_menor], arr[i]
+        lista[i], lista[indice_menor] = lista[indice_menor], lista[i]
         
-    return arr
+    return lista
 ```
 
 ### 🧠 Dissecando a Lógica
@@ -114,7 +114,7 @@ O código do Selection Sort é um ótimo exemplo prático de como rastrear índi
 
 3. **Olhando para o resto da fila (`for j in range(i + 1, n)`)**:
    - Não começamos a busca do zero porque o lado esquerdo do array já está pronto. E começamos de `i + 1` porque não faz sentido o elemento atual apostar corrida contra ele mesmo!
-   - Durante a busca, se acharmos um valor (`arr[j]`) menor que o nosso campeão atual (`arr[indice_menor]`), nós não trocamos os valores de lugar imediatamente. Nós simplesmente anotamos a posição do novo vencedor: `indice_menor = j`.
+   - Durante a busca, se acharmos um valor (`lista[j]`) menor que o nosso campeão atual (`lista[indice_menor]`), nós não trocamos os valores de lugar imediatamente. Nós simplesmente anotamos a posição do novo vencedor: `indice_menor = j`.
 
 4. **Trocando de lugar apenas uma vez**:
    A troca real (o *swap*) só acontece totalmente fora do laço interno, quando já temos certeza absoluta de que olhamos todos os candidatos. É isso que faz o Selection Sort ser tão elegante: ele economiza processamento e acessos à memória realizando apenas uma troca por rodada!
