@@ -1,23 +1,138 @@
-
-.sidebar { width: 340px; background-color: var(--sidebar-bg); border-right: 2px solid var(--border-color); padding: 3rem 0; flex-shrink: 0; overflow-y: auto; position: sticky; top: 0; height: 100vh; box-shadow: inset -5px 0 15px rgba(0,0,0,0.02); }
-.main-content { flex-grow: 1; padding: 4rem 5rem; max-width: 900px; min-width: 0; width: 100%; margin: 0 auto; }
-.site-header { margin-bottom: 3rem; border-bottom: 2px dashed #ddd; padding-bottom: 1.5rem; }
-.site-header h1 { font-size: 2rem; margin: 0; border: none; }
-.site-header h1 a { color: var(--heading-color); }
-.site-description { color: #666; font-family: var(--font-heading); font-size: 1.2rem; margin-top: 0.2rem; }
-.site-footer { margin-top: 5rem; padding-top: 2rem; border-top: 2px solid #eee; text-align: center; font-family: var(--font-heading); font-size: 1rem; color: #999; }
-.mobile-header { display: none; }
-@media (max-width: 900px) {
-  .mobile-header { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 1rem; background-color: var(--bg-color); border-bottom: 2px solid var(--border-color); position: sticky; top: 0; z-index: 100; }
-  .mobile-site-title a { font-family: var(--font-heading); font-size: 1.5rem; font-weight: bold; color: var(--heading-color); text-decoration: none; }
-  .mobile-menu-btn { background: var(--heading-color); color: var(--bg-color); border: none; padding: 0.4rem 0.8rem; font-family: var(--font-heading); font-size: 1.5rem; border-radius: var(--soft-sketch); cursor: pointer; box-shadow: 2px 2px 0 rgba(0,0,0,0.1); }
-  body { flex-direction: column; }
-  .main-content { margin-left: 0; max-width: 100%; padding: 1.2rem 1rem; }
+.sidebar {
+  width: 340px;
+  background-color: var(--sidebar-bg);
+  border-right: 2px solid var(--border-color);
+  padding: 3rem 0;
+  flex-shrink: 0;
+  overflow-y: auto;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  box-shadow: inset -5px 0 15px rgba(0, 0, 0, 0.02);
 }
-.sidebar-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.4); z-index: 900; }
+
+.main-content {
+  flex-grow: 1;
+  padding: 4rem 5rem;
+  max-width: 900px;
+  min-width: 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.site-header {
+  margin-bottom: 3rem;
+  border-bottom: 2px dashed #ddd;
+  padding-bottom: 1.5rem;
+}
+
+.site-header h1 {
+  font-size: 2rem;
+  margin: 0;
+  border: none;
+}
+
+.site-header h1 a {
+  color: var(--heading-color);
+}
+
+.site-description {
+  color: #666;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+}
+
+.site-footer {
+  margin-top: 5rem;
+  padding-top: 2rem;
+  border-top: 2px solid #eee;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: #999;
+}
+
+.mobile-header {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--bg-color);
+    border-bottom: 2px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .mobile-site-title a {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--heading-color);
+    text-decoration: none;
+  }
+
+  .mobile-menu-btn {
+    background: var(--heading-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 0.4rem 0.8rem;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    border-radius: var(--soft-sketch);
+    cursor: pointer;
+    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  body {
+    flex-direction: column;
+  }
+
+  .main-content {
+    margin-left: 0;
+    max-width: 100%;
+    padding: 1.2rem 1rem;
+  }
+}
+
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 900;
+}
+
 @media (max-width: 768px) {
-  .sidebar { position: fixed; top: 0; left: -320px; width: 300px; height: 100vh; z-index: 999; transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
-  .sidebar.active { left: 0; }
-  .sidebar-overlay.active { display: block; }
-  .main-content { padding: 1rem 0.5rem; width: 100vw; }
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -320px;
+    width: 300px;
+    height: 100vh;
+    z-index: 999;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .sidebar.active {
+    left: 0;
+  }
+
+  .sidebar-overlay.active {
+    display: block;
+  }
+
+  .main-content {
+    padding: 1rem 0.5rem;
+    width: 100vw;
+  }
 }

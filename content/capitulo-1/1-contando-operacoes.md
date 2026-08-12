@@ -63,7 +63,7 @@ def comparar_cada_livro_com_todos_os_outros(estante):
 
 Para cada **um** livro do primeiro laço, o segundo laço é forçado a rodar **todos** os `n` livros. Você está multiplicando \( n \times n \). O resultado é a terrível curva **\( O(n^2) \)**.
 
-![Hamster exausto correndo na roda de exercícios para ilustrar a repetição O(n²)](/images/hamster-roda.png)
+![Macaquinho exausto comparando livros para ilustrar O(n²)](/images/macaco-livros.png)
 
 {{< aside >}}
 **E se o laço interno for diminuindo?**  

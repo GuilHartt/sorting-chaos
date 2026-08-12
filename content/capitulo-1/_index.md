@@ -27,7 +27,7 @@ Nós medimos a velocidade pelo **crescimento do número de operações**. Usamos
 
 O Big O responde a uma única pergunta crucial: *O quão rápido o tempo de execução do nosso algoritmo piora à medida que a quantidade de dados (n) aumenta?*
 
-![Gráfico da Notação Big O O(n)](/images/grafico-big-o.png)
+
 
 ### As Duas Regras de Ouro
 

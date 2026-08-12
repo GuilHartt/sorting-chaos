@@ -23,7 +23,7 @@ Se você tem 8 livros na estante e divide a pilha pela metade:
 
 Foram necessários **3 passos** para resolver o problema. Na matemática formal, nós dizemos que \( \log_2 8 = 3 \) (O logaritmo de 8, na base 2, resulta em 3).
 
-![Pedaço de queijo sendo fatiado sucessivamente pela metade para ilustrar O(log n)](/images/queijo-logaritmo.png)
+![Tesoura cortando estante pela metade para ilustrar O(log n)](/images/tesoura-estante.png)
 
 ### A Magia na Prática
 

@@ -11,7 +11,7 @@ Como você organizaria todo mundo?
 
 O **Bubble Sort** (ou Ordenação por Flutuação) tem uma ideia muito simples e orgânica. Você vai do início ao fim da fila comparando as pessoas duas a duas. Se a pessoa da frente for maior que a pessoa de trás, elas trocam de lugar.
 
-![Copos de café em fila, trocando de lugar](/images/copos-cafe.png)
+![Fila de bonequinhos trocando de lugar](/images/fila-bonequinhos.png)
 
 Ao fazer isso repetidas vezes, os maiores valores vão "borbulhando" para o final da fila, assim como bolhas de ar sobem até a superfície da água.
 
@@ -51,7 +51,7 @@ Por fim, comparamos o **8** (que continua andando) e o **2**.
 
 🎉 **Fim da Passada 1!** Percebeu o que aconteceu? O maior número de todos (o 8) flutuou como uma bolha gigante até o final do array. Agora sabemos com absoluta certeza que o último elemento está na posição correta. 
 
-![Bolha gigante flutuando com o número 8](/images/bolhas.png)
+
 
 ### Passada 2
 
@@ -138,6 +138,6 @@ Vamos pensar juntos. Se tivermos **10 elementos**, faremos cerca de 10 comparaç
 
 O Bubble Sort é lento para listas grandes. Lembra da pilha de 1.000 livros? Em um Bubble Sort no pior caso, faríamos `1000 * 1000` = **1 milhão de comparações**! Haja café para esperar isso rodar.
 
-![Caracol dormindo num computador lento O(n²)](/images/caracol.png)
+
 
 Apesar de ser lento na vida real, ele é excelente para aprender a pensar em algoritmos. Nos próximos capítulos, vamos ver estratégias muito mais espertas que o Bubble Sort.

@@ -141,6 +141,6 @@ O Insertion Sort tem uma característica que o torna especial entre os algoritmo
 - **Pior Caso:** A lista está invertida (`[5, 4, 3, 2, 1]`). Para cada elemento novo, temos que empurrar todos os outros. Isso nos dá uma montanha de trabalho e a complexidade bate em **O(n²)**, assim como seus primos Bubble e Selection.
 - **Melhor Caso:** A lista já está ordenada (ou quase ordenada). Se a lista for `[1, 2, 3, 4, 5]`, o algoritmo só olha para o elemento anterior, vê que não precisa empurrar ninguém, e segue a vida. Ele faz apenas **O(n)** operações. Isso é absurdamente rápido!
 
-![Escorregador deslizando velozmente O(n)](/images/escorregador.png)
+
 
 É por causa desse comportamento brilhante no "melhor caso" que o Insertion Sort é usado na vida real dentro de algoritmos modernos muito mais complexos (como o Timsort, que é o padrão do próprio Python e do Java). Quando as listas que sobram ficam muito pequenininhas ou já quase ordenadas, os super-algoritmos "chamam" o humilde Insertion Sort para terminar o serviço de forma rápida e eficiente.

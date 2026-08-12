@@ -129,6 +129,6 @@ O Selection Sort é mais limpo que o Bubble Sort, pois ele faz muito menos *troc
 
 Para encontrar o menor elemento na primeira vez, você olhou todos os `n` elementos. Na segunda vez, `n - 1`. Depois `n - 2`... No final, você fez operações proporcionais a **O(n²)**, independentemente do array estar bagunçado ou já ordenado (pois ele sempre tem que procurar até o fim para ter certeza de que encontrou o menor).
 
-![Balança antiga medindo a complexidade O(n²)](/images/balanca.png)
+
 
 O Selection Sort não é super veloz, mas é elegante e muito intuitivo. No próximo capítulo, vamos aprender o algoritmo que você (provavelmente) usa quando está ordenando cartas de baralho na sua mão!
